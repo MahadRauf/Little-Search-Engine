@@ -41,6 +41,7 @@ public class LittleSearchEngine {
 	public HashMap<String,Occurrence> loadKeywordsFromDocument(String docFile) 
 	throws FileNotFoundException {
 		/** COMPLETE THIS METHOD **/
+		// will not be tested with no file as input so could remove
 		/*File tempFile = new File(docFile);
 		if(!tempFile.exists()){
 			throw new FileNotFoundException("Could not find file");
@@ -80,9 +81,6 @@ public class LittleSearchEngine {
 	 */
 	public void mergeKeywords(HashMap<String,Occurrence> kws) {
 		/** COMPLETE THIS METHOD **/
-		// for String i in kws?
-		// yeah idk I'll look at this later*
-		// probably gotta redo this and insertLastOcuurrence
 		for (String i : kws.keySet()){
 			if(!keywordsIndex.containsKey(i)){
 				ArrayList<Occurrence> toAdd = new ArrayList<Occurrence>();
@@ -117,7 +115,6 @@ public class LittleSearchEngine {
 	 */
 	public String getKeyword(String word) {
 		/** COMPLETE THIS METHOD **/
-		// probably doesnt work right idk Im going to sleep
 		String temp = word.toLowerCase();
 		int numToRemove = 0;
 		int l = word.length();
@@ -159,7 +156,6 @@ public class LittleSearchEngine {
 	 */
 	public ArrayList<Integer> insertLastOccurrence(ArrayList<Occurrence> occs) {
 		/** COMPLETE THIS METHOD **/
-		// honestly have no clue what this method is even for or does
 		if (occs.size() == 1){
 			return null;
 		}
